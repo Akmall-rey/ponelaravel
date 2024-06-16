@@ -1,0 +1,21 @@
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, velit hic fugiat ea, distinctio reprehenderit reiciendis perferendis, ducimus quibusdam dolore tempora non sed ipsam ipsum aspernatur molestiae.</p><p>Qui, corrupti nostrum distinctio nisi dignissimos, iusto alias corporis doloremque accusantium harum pariatur assumenda. Similique possimus sequi ex modi tempora veniam consectetur doloribus. Vitae molestias iste, autem ipsum, totam vero dolorem nostrum rem eaque magnam voluptatum ea asperiores eligendi neque sit quaerat error, veritatis sed laudantium labore necessitatibus excepturi culpa!</p><p>Dolor voluptates recusandae sunt tempora alias qui repudiandae esse reprehenderit! Saepe optio dolor pariatur eveniet et voluptatibus. Voluptate enim animi illum numquam minus facere similique deserunt reiciendis cum consequatur molestias tempore asperiores tempora, hic vitae ipsa eligendi labore quas. Nobis, distinctio placeat? Distinctio, libero quis, doloremque sed repellendus animi amet aspernatur laboriosam quae temporibus ab. Totam sed sapiente voluptas nam recusandae nihil qui hic. Recusandae, magni velit repudiandae a odio nobis animi officiis.</p>
+
+App\Models\Post::create([
+    'title'=>'Judul Ketiga',
+    'slug' => 'judul-ketiga',
+    'excerpt'=>'Lorem ipsum ketiga',
+    'body'=>"<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, velit hic fugiat ea, distinctio reprehenderit reiciendis perferendis, ducimus quibusdam dolore tempora non sed ipsam ipsum aspernatur molestiae.</p><p>Qui, corrupti nostrum distinctio nisi dignissimos, iusto alias corporis doloremque accusantium harum pariatur assumenda. Similique possimus sequi ex modi tempora veniam consectetur doloribus. Vitae molestias iste, autem ipsum, totam vero dolorem nostrum rem eaque magnam voluptatum ea asperiores eligendi neque sit quaerat error, veritatis sed laudantium labore necessitatibus excepturi culpa!</p><p>Dolor voluptates recusandae sunt tempora alias qui repudiandae esse reprehenderit! Saepe optio dolor pariatur eveniet et voluptatibus. Voluptate enim animi illum numquam minus facere similique deserunt reiciendis cum consequatur molestias tempore asperiores tempora, hic vitae ipsa eligendi labore quas. Nobis, distinctio placeat? Distinctio, libero quis, doloremque sed repellendus animi amet aspernatur laboriosam quae temporibus ab. Totam sed sapiente voluptas nam recusandae nihil qui hic. Recusandae, magni velit repudiandae a odio nobis animi officiis.</p>"
+])
+
+App\Models\Category::create([
+    'name'=> 'Personal',
+    'slug'=>'personal'
+])
+
+App\Models\Post::create([
+    'title'=> 'Judul Ke-Tiga',
+    'category_id'=>'3',
+    'slug'=>'judul-ke-tiga',
+    'excerpt'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo officiis sit doloribus!',
+    'body'=>'<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, suscipit, quisquam quam dolorum quis asperiores totam non cum consectetur magni qui vero omnis veritatis.</p><p>nobis animi provident odio minima et porro? Ipsum recusandae reprehenderit odio ratione atque culpa molestiae debitis, distinctio sint, maxime, hic laboriosam minima quaerat voluptate sed magnam corrupti. Molestiae voluptates maxime quasi fugit culpa architecto reprehenderit eum esse nulla incidunt quam, ut necessitatibus quo dolorum, aut voluptatibus magnam eaque facere saepe aspernatur exercitationem ad.</p><p>Quis, vel! Quidem illum iste veniam? Eligendi esse amet quisquam ea harum! Impedit asperiores aliquam excepturi reiciendis iusto magnam aliquid. Reprehenderit alias molestiae laudantium, rerum quos quae rem! Tenetur fugit ut possimus, nam ullam, deserunt cum ad quos mollitia dolores libero assumenda exercitationem?</p>'
+])
