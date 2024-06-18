@@ -1,17 +1,23 @@
-@extends('layouts.main')
+@extends('dashboard.layouts.main')
 
 @section('container')
     <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-8">
+        <div class="row my-3">
+            <div class="col-lg-8">
                 <h1 class="mb-3">{{ $post->title }}</h1>
 
-                <p>By <a href="/posts?author={{ $post->author->username }}"
-                        class="text-decoration-none">{{ $post->author->name }}</a> in
-                    <a href="/posts?category={{ $post->category->slug }}" class="text-decoration-none">
-                        {{ $post->category->name }}
-                    </a>
-                </p>
+                <a href="/dashboard/posts" class="btn btn-success"><span data-feather="arrow-left"></span> Back to all my
+                    posts</a>
+                <a href="/dashboard/posts/{{ $post->slug }}/edit" class="btn btn-warning"><span data-feather="edit"></span>
+                    Edit</a>
+                <form action="/dashboard/posts/{{ $post->slug }}" method="POST" class="d-inline">
+                    @method('delete')
+                    @csrf
+                    <button class="btn btn-danger" onclick="return confirm('Are you sure?')"><span
+                            data-feather="x-circle"></span> Delete</button>
+                </form>
+
+                <br>
 
                 @if ($post->image)
                     <div style="max-height: 350px; overflow:hidden;">
@@ -19,17 +25,12 @@
                             class="img-fluid mt-3">
                     </div>
                 @else
-                <div class="row justify-content-center">
                     <img src="https://picsum.photos/seed/{{ $post->category->name }}/500/400"
                         alt="{{ $post->category->name }}" class="img-fluid mt-3">
-                </div>
                 @endif
-
                 <article class="my-3 fs-5">
                     {!! $post->body !!}
                 </article>
-
-                <a href="/posts" class="d-block mt-3">Back to Posts</a>
 
             </div>
         </div>
